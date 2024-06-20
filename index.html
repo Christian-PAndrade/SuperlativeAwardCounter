@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./main.css"/>
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body>
+        <div class="main_container">
+            <h1>Nine20 Award Caculator-inator</h1>
+            <h3>Input the answers for each sheet, then hit next. Once you are done, hit 'Calculate!' and watch it all unfold</h3>
+            <div class="calculate">
+                <button onclick="calculateFinalResults()">Calculate</button>
+            </div>
+            <div class="input_container">
+                <div class="left_side">
+                    <div class="input_group">
+                        <label for="question1">Question 1</label>
+                        <input id="question1" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question2">Question 2</label>
+                        <input id="question2" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question3">Question 3</label>
+                        <input id="question3" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question4">Question 4</label>
+                        <input id="question4" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question5">Question 5</label>
+                        <input id="question5" type="text" />
+                    </div>
+                </div>
+                <div class="center_left">
+                    <div class="input_group">
+                        <label for="question6">Question 6</label>
+                        <input id="question6" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question7">Question 7</label>
+                        <input id="question7" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question8">Question 8</label>
+                        <input id="question8" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question9">Question 9</label>
+                        <input id="question9" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question10">Question 10</label>
+                        <input id="question10" type="text" />
+                    </div>
+                </div>
+                <div class="center_right">
+                    <div class="input_group">
+                        <label for="question11">Question 11</label>
+                        <input id="question11" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question12">Question 12</label>
+                        <input id="question12" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question13">Question 13</label>
+                        <input id="question13" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question14">Question 14</label>
+                        <input id="question14" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question15">Question 15</label>
+                        <input id="question15" type="text" />
+                    </div>
+                </div>
+                <div class="right_side">
+                    <div class="input_group">
+                        <label for="question16">Question 16</label>
+                        <input id="question16" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question17">Question 17</label>
+                        <input id="question17" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question18">Question 18</label>
+                        <input id="question18" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question19">Question 19</label>
+                        <input id="question19" type="text" />
+                    </div>
+                    <div class="input_group">
+                        <label for="question20">Question 20</label>
+                        <input id="question20" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="next">
+                <button onclick="saveAnswers()">Next</button>
+                <button onclick="randomlyGenerate()">Generate</button>
+            </div>
+        </div>
+        <div class="answers_container" style="display: none;">
+            <h1>The award winners are:</h1>
+            <div class="results">
+                <div class="result_group">
+                    <p>Question #1</p>
+                    <p class="question1_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #2</p>
+                    <p class="question2_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #3</p>
+                    <p class="question3_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #4</p>
+                    <p class="question4_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #5</p>
+                    <p class="question5_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #6</p>
+                    <p class="question6_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #7</p>
+                    <p class="question7_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #8</p>
+                    <p class="question8_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #9</p>
+                    <p class="question9_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #10</p>
+                    <p class="question10_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #11</p>
+                    <p class="question11_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #12</p>
+                    <p class="question12_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #13</p>
+                    <p class="question13_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #14</p>
+                    <p class="question14_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #15</p>
+                    <p class="question15_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #16</p>
+                    <p class="question16_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #17</p>
+                    <p class="question17_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #18</p>
+                    <p class="question18_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #19</p>
+                    <p class="question19_result"></p>
+                </div>
+                <div class="result_group">
+                    <p>Question #20</p>
+                    <p class="question20_result"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
